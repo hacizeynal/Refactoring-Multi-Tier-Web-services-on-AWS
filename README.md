@@ -17,25 +17,25 @@ We can use Cloud services ,instead of using IAAS we will be using PAAS & SAAS ,i
 
 Following AWS services will be used in this project for Frontend
 
-* Beanstalk >> VM for Tomcat Application server \
-* Beanstalk >> Automation for VM Scaling \
-* Beanstalk >> NGINX Load Balancer Replacement \
+* Beanstalk >> VM for Tomcat Application server 
+* Beanstalk >> Automation for VM Scaling 
+* Beanstalk >> NGINX Load Balancer Replacement 
 * S3/EFS >> Storage 
 
 Following AWS services will be used in this project for Backend
 
-* RDS Instance >> Databases \
-* Elasticcache >> Memcached \
-* Active MW >> Rabbit MQ \
-* Route53 >> DNS \
+* RDS Instance >> Databases 
+* Elasticcache >> Memcached 
+* Active MW >> Rabbit MQ 
+* Route53 >> DNS 
 * CloudFront >> Content Delivery Network
 * AWS CloudWatch >> Monitoring
 
 **OBJECTIVE**
 
-* Flexible Infra \
-* No Upfront Cost \
-* IAAC \
+* Flexible Infra 
+* No Upfront Cost 
+* IAAC 
 * PAAS & SAAS for low operational overhead
 
 **High level of traffic flow is described below** 
