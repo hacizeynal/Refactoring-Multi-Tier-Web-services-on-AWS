@@ -48,3 +48,16 @@ Following AWS services will be used in this project for Backend
 
 [![Screenshot-2022-10-21-at-11-41-04.png](https://i.postimg.cc/j5ChWf2M/Screenshot-2022-10-21-at-11-41-04.png)](https://postimg.cc/S2F93JW9)
 
+--------------------------------------------------------------------------------------------------------------------
+
+Since we have already created Security Groups in previous project ,we will re-use them again ,because all allowed ports will be same.
+Next step will be creating RDS on AWS.
+
+* Engine version >> MySQL 5.7.39
+* Instance class >> db.t3.micro (Free Tier)
+* Multi-AZ enabled >> No
+* VPC/Subnet >> Dedicated VPC for DevOps projects
+
+
+
+Please make sure to save credentials if you choose auto-password generate.
