@@ -51,6 +51,8 @@ Following AWS services will be used in this project for Backend
 --------------------------------------------------------------------------------------------------------------------
 ## Configure RDS
 
+We will start configuration from Backend services.
+
 Since we have already created Security Groups in previous project ,we will re-use them again ,because all allowed ports will be same.We will create parameter and subnet group and attach them to RDS configuration.
 Next step will be creating RDS on AWS.
 
@@ -73,6 +75,14 @@ As RDS ,we will also create parameter group and subnet group and attach them to 
 * VPC/Subnet >> Dedicated VPC for DevOps projects
 
 [![Screenshot-2022-10-21-at-12-40-01.png](https://i.postimg.cc/6qrHN10D/Screenshot-2022-10-21-at-12-40-01.png)](https://postimg.cc/xNdGv5BR)
+
+## Configure Amazon MQ
+
+* Broker instance type >> mq.t3.micro
+* Broker engine >> RabbitMQ
+* Broker engine version >> 3.9.16
+
+[![Screenshot-2022-10-21-at-12-49-49.png](https://i.postimg.cc/kgRP07SZ/Screenshot-2022-10-21-at-12-49-49.png)](https://postimg.cc/pmvS8bqY)
 
 
 
