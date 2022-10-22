@@ -84,6 +84,78 @@ As RDS ,we will also create parameter group and subnet group and attach them to 
 
 [![Screenshot-2022-10-21-at-12-49-49.png](https://i.postimg.cc/kgRP07SZ/Screenshot-2022-10-21-at-12-49-49.png)](https://postimg.cc/pmvS8bqY)
 
+## Configure MySQL Client
+
+We will create one more EC2 instance to manage MySQL Database and we will login to RDS in order to initialize database.
+
+Let's check if we can connect to MySQL from our client.
+
+```
+mysql -h rds-mysql.cvqlmbpezuq0.us-east-1.rds.amazonaws.com -u admin -pOEHlJvDdt7uoBC4Z9lB
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| accounts           |
+| innodb             |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql>
+
+root@ip-172-18-172-160:~# git clone https://github.com/hacizeynal/Refactoring-services-on-AWS.git
+
+cd src/main/
+
+root@ip-172-18-172-160:~/Refactoring-services-on-AWS/src/main/resources# ls -la
+
+drwxr-xr-x 2 root root 4096 Oct 22 08:59 .
+drwxr-xr-x 5 root root 4096 Oct 22 08:59 ..
+-rw-r--r-- 1 root root  719 Oct 22 08:59 application.properties
+-rw-r--r-- 1 root root 6176 Oct 22 08:59 db_backup.sql
+-rw-r--r-- 1 root root  581 Oct 22 08:59 logback.xml
+-rw-r--r-- 1 root root  280 Oct 22 08:59 validation.properties
+
+// Initilize DB with schema 
+
+mysql -h rds-mysql.cvqlmbpezuq0.us-east-1.rds.amazonaws.com -u admin -pOEHlJvDdt7uoBC4Z9lBC accounts < db_backup.sql 
+
+root@ip-172-18-172-160:~/Refactoring-services-on-AWS/src/main/resources# mysql -h rds-mysql.cvqlmbpezuq0.us-east-1.rds.amazonaws.com -u admin -pOEHlJvDdt7uoBC4Z9lBC accounts
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 271
+Server version: 5.7.39 Source distribution
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show tables;
++--------------------+
+| Tables_in_accounts |
++--------------------+
+| role               |
+| user               |
+| user_role          |
++--------------------+
+3 rows in set (0.00 sec)
+
+mysql> 
+
+```
+
 
 
 
