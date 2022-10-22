@@ -206,6 +206,7 @@ Now we can browse to https://devopsjulien.zhajili.com and can see that our certi
 
 Cloudfront is Content Delivery Network of AWS ,by configuring it we can cache our WebSite around the world and we will distribute our content ,it will make it more reliable and faster ,also we will make sure that it will have less latency.
 
+Enjoy :) 
 
 
 
