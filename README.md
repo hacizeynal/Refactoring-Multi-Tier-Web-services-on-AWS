@@ -198,6 +198,10 @@ We will need to map our new hostname to different hostname in GoDaddy ,so we wil
 
 [![Screenshot-2022-10-22-at-22-16-32.png](https://i.postimg.cc/3w127tB5/Screenshot-2022-10-22-at-22-16-32.png)](https://postimg.cc/yJJDyXtv)
 
+Now we can browse to https://devopsjulien.zhajili.com and can see that our certificate is also trusted which is provided by ACM.
+
+[![Screenshot-2022-10-22-at-22-21-51.png](https://i.postimg.cc/d0Zh3vGY/Screenshot-2022-10-22-at-22-21-51.png)](https://postimg.cc/qt0JDPmb)
+
 
 
 
