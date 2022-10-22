@@ -170,7 +170,7 @@ We can validate Beanstalk via clicking URL on default Application ,it should giv
 
 [![Screenshot-2022-10-22-at-21-22-24.png](https://i.postimg.cc/d3s4sM2F/Screenshot-2022-10-22-at-21-22-24.png)](https://postimg.cc/jw1zcF33)
 
-
+Please make sure to update SG if needed with needed ports in order to allow traffic sourced from EC2 (created via Beanstalk) to Backend services. We need also to add second listener with port 443 with SSL certificate in our Load Balancer configuration.
 
 
 
