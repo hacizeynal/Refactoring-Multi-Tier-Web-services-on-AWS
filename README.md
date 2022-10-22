@@ -166,13 +166,37 @@ Beanstalk will automate following services and help to deploy our application.
 
 We can think Application as a big container and within the Application, we can create multiple different environments with different configurations.
 
+Please make sure to update SG if needed with needed ports in order to allow traffic sourced from EC2 (created via Beanstalk) to Backend services. We need also to add second listener with port 443 with SSL certificate in our Load Balancer configuration.
+
+
 We can validate Beanstalk via clicking URL on default Application ,it should give us Welcome Page.
 
 [![Screenshot-2022-10-22-at-21-22-24.png](https://i.postimg.cc/d3s4sM2F/Screenshot-2022-10-22-at-21-22-24.png)](https://postimg.cc/jw1zcF33)
 
-Please make sure to update SG if needed with needed ports in order to allow traffic sourced from EC2 (created via Beanstalk) to Backend services. We need also to add second listener with port 443 with SSL certificate in our Load Balancer configuration.
+## Build Code and Deploy Artifact
 
+We will need to update **application properties** file with since we have created Elasticache ,RDS and RMQ via AWS.
 
+```
+\King Julien$ cd src/main/resources 
+-rw-rw-r--@ 1 zhajili  staff   719 19 Aug  2021 application.properties
+```
+We need to save file and navigate to directory where **pom.xml** is located and execute command **mvn install**.
+Successfull execution will give us directory called **target** where our **artifacts** are located.
+
+```
+\King Julien$ ls -l target 
+drwxr-xr-x   5 zhajili  staff       160 22 Oct 21:52 vprofile-v2
+-rw-r--r--   1 zhajili  staff  48451215 22 Oct 21:52 vprofile-v2.war
+```
+After creating artifact we will navigate to Beanstalk and upload and deploy our code to AWS.
+We can see that application v1.0 is deployed and our health status is Green now.
+
+[![Screenshot-2022-10-22-at-22-10-35.png](https://i.postimg.cc/QNyVp2tn/Screenshot-2022-10-22-at-22-10-35.png)](https://postimg.cc/5j8xJk8w)
+
+We will need to map our new hostname to different hostname in GoDaddy ,so we will need update our CNAME record from our previous project.
+
+[![Screenshot-2022-10-22-at-22-16-32.png](https://i.postimg.cc/3w127tB5/Screenshot-2022-10-22-at-22-16-32.png)](https://postimg.cc/yJJDyXtv)
 
 
 
