@@ -162,6 +162,7 @@ Beanstalk will automate following services and help to deploy our application.
 * EC2 instances (depends on if we will use LoadBalancer)
 * Elastic Load Balancer (default is ALB)
 * Autoscaling Group for EC2
+* Security/VPC configuuration and etc
 
 We can think Application as a big container and within the Application, we can create multiple different environments with different configurations.
 
