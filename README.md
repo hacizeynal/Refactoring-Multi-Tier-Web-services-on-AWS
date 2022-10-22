@@ -166,6 +166,10 @@ Beanstalk will automate following services and help to deploy our application.
 
 We can think Application as a big container and within the Application, we can create multiple different environments with different configurations.
 
+We can validate Beanstalk via clicking URL on default Application ,it should give us Welcome Page.
+
+[![Screenshot-2022-10-22-at-21-22-24.png](https://i.postimg.cc/d3s4sM2F/Screenshot-2022-10-22-at-21-22-24.png)](https://postimg.cc/jw1zcF33)
+
 
 
 
