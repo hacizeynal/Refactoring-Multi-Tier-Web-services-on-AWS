@@ -202,6 +202,11 @@ Now we can browse to https://devopsjulien.zhajili.com and can see that our certi
 
 [![Screenshot-2022-10-22-at-22-21-51.png](https://i.postimg.cc/d0Zh3vGY/Screenshot-2022-10-22-at-22-21-51.png)](https://postimg.cc/qt0JDPmb)
 
+## Configure CloudFront
+
+Cloudfront is Content Delivery Network of AWS ,by configuring it we can cache our WebSite around the world and we will distribute our content ,it will make it more reliable and faster ,also we will make sure that it will have less latency.
+
+
 
 
 
